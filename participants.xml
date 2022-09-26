@@ -1,0 +1,16 @@
+<participants>
+  <participant id="23">
+    <name>John Carter</name>
+    <admissiondate>25/12/2015</admissiondate>
+  </participant>
+
+  <participant id="29">
+    <name>Bob Marshal</name>
+    <admissiondate>13/01/1999</admissiondate>
+  </participant>
+
+  <participant id="35">
+    <name>Clark Kent</name>
+    <admissiondate>17/06/2005</admissiondate>
+  </participant>
+</participants>
