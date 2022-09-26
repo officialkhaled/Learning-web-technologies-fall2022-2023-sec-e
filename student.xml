@@ -1,0 +1,16 @@
+<students>
+    <student id="1">
+        <name> Khaled </name>
+        <id>3526</id>
+        <email>khaled@aiub.edu</email>
+    </student>
+<!-- 
+    id="1" : attribute
+    <student> </student> : element
+ -->
+    <student id="2">
+        <name> Hossain </name>
+        <id>2635</id>
+        <email>hossain@aiub.edu</email>
+    </student>
+</students>
