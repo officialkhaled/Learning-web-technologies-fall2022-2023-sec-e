@@ -1,7 +1,10 @@
 <employers>
   <employer id="1">
     <name>John Doe</name>
-    <address>H# 38, R#3, Banani, Dhaka</address>
+    <address>
+    <house>H# 38</house>
+    <road>R#</road>
+    H# 38, R#3, Banani, Dhaka</address>
     <dept>Sales</dept>
     <salary>$20000</salary>
   </employer>
