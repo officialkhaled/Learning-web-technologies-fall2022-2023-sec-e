@@ -44,5 +44,4 @@ Better Comments
 -- SETTINGS --
 --------------
 word wrap - on
->>>>>>> 808050bb5d053c7f825051c3d1130c90e0e0f7a4
 default formatter - Prettier
