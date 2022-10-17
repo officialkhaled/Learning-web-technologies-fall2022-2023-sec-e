@@ -45,19 +45,18 @@
     $password = $_POST ['password'];
 
     // Username
-    if ($lenUname <= 2) {  
+    if ($lenUname < 2) {  
         $ErrMsg = "Username must contain at least 2 characters.";  
-
         echo $ErrMsg;  
-
-        if (!preg_match ("/^[_a-zA-z0-9-]*$/", $username) ) {  
-                $ErrMsg = "Username can contain alpha numeric characters, period, dash or underscore only.";  
+    } else if ($lenUname >= 2) {
+        if (!preg_match ("/^[_a-zA-z0-9-]*$/", $username)) {  
+            $ErrMsg = "Username can contain alpha numeric characters, period, dash or underscore only.";  
                 echo $ErrMsg;  
         } else {  
-                echo "Welcome Home, Mr. ", $username;  
-        }  
-    } 
-
+            echo "Welcome Home, Mr. ", $username;  
+        }
+    }
+          
     
 
 /*
