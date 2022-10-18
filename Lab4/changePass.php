@@ -3,7 +3,7 @@
         <title>Change Password Form</title>
     </head>
     <body>
-        <form action="login.php" method="post">
+        <form method="post" action="" enctype="">
         <fieldset>
             <legend>CHANGE PASSWORD</legend>
             <table>
@@ -36,6 +36,7 @@
     </body>
 </html>
 
+ <!-- PHP Integration -->
 
 <?php 
 

@@ -3,12 +3,12 @@
         <title>Picture Form</title>
     </head>
     <body>
-        <form action="login.php" method="post">
+        <form method="post" action="" enctype="">
         <fieldset>
             <legend>PROFILE PICTURE</legend>
             <table>
                 <tr>
-                    <td><img src="" alt="pfp"></td>
+                    <td><img src="pfp.png" alt="pfp" style="width: 80;"></td>
                 </tr>
                 <tr>
                     <td><input type="file" name="image" value=""></td>
@@ -26,6 +26,8 @@
     </form>
     </body>
 </html>
+
+ <!-- PHP Integration -->
 
 <?php
 

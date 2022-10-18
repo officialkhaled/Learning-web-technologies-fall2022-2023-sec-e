@@ -3,7 +3,7 @@
         <title>Login Form</title>
     </head>
     <body>
-        <form  method="post" action="login.php" enctype="">
+        <form  method="post" action="" enctype="">
         <fieldset>
             <legend>LOGIN</legend>
             <table>
@@ -33,6 +33,8 @@
     </body>
 </html>
 
+ <!-- PHP Integration -->
+
 <?php
 
     echo "PHP VALIDATION: "; 
@@ -45,7 +47,7 @@
     $password = $_POST ['password'];
 
     // Username
-    if ($lenUname < 2) {  
+    if ($lenUname < 2 && $lenUname) {  
         $ErrMsg = "Username must contain at least 2 characters.";  
         echo $ErrMsg;  
     } else if ($lenUname >= 2) {
@@ -56,17 +58,6 @@
             echo "Welcome Home, Mr. ", $username;  
         }
     }
-          
-    
-
-/*
-    // Password
-    if (!preg_match ("/^[a-zA-z0-9]*$/", $username) ) {  
-        $ErrMsg = "Username can contain alpha numeric characters, period, dash or underscore only.";  
-             echo $ErrMsg;  
-    } else {  
-        echo "Welcome Home, Mr. ", $username;  
-    }
-*/
+        
 
 ?>

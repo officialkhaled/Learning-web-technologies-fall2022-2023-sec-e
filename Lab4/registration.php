@@ -3,7 +3,7 @@
         <title>Login Form</title>
     </head>
     <body>
-        <form action="login.php" method="post">
+        <form method="post" action="" enctype="">
         <fieldset>
             <legend>REGISTRATION</legend>
             <table>
@@ -58,6 +58,8 @@
     </form>
     </body>
 </html>
+
+ <!-- PHP Integration -->
 
 <?php 
 
