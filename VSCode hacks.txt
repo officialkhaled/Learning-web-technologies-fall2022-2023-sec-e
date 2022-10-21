@@ -1,4 +1,17 @@
-<<<<<<< HEAD
+VSCODE SETUP: https://www.youtube.com/watch?v=fJEbVCrEMSE
+Git in 30 mins: https://www.youtube.com/watch?v=N_bMCff8q6A
+Emmet = Faster Coding: https://www.youtube.com/watch?v=EzGWXTASWWo
+
+------------------------
+-- Keyboard Shortcuts --
+------------------------
+Alt + Shift + Down Arrow : To duplicate the current line
+Ctrl + B : To open/close the left menu tab
+Alt + Click : To create multiple cursors and select multiple lines and type in same code 
+Alt + Arrow(up/down) : To move a line up/down
+Ctrl + D : To select the same word from multiple lines and create multiple cursors (replace)
+
+----------------
 -- EXTENSIONS --
 ----------------
 Auto Close Tag
@@ -16,32 +29,19 @@ Guides
 
 CodeSnap
 Better Comments
+Fluent Icons
+Vscode-icons
+Tabnine AI
 
-
+--------------
 -- SETTINGS --
 --------------
-word wrap - on
-=======
--- EXTENSIONS --
-----------------
-Auto Close Tag
-Auto Rename Tag
-Live Server
-Prettier
-XML Tools
-Rewrap
-
-Color Highlight
-Colorize
-Electron Color Theme
-One Monokai Theme
-Guides
-
-CodeSnap
-Better Comments
-
-
--- SETTINGS --
---------------
-word wrap - on
-default formatter - Prettier
+Word wrap - on
+Default formatter - Prettier
+Font size - 20
+Tab size - 2
+Auto save - onFocusChange
+Bracket pair colorization - enabled
+Bracket pair horizontal - active
+Bracket pair guides - true
+Cursor width - 4
