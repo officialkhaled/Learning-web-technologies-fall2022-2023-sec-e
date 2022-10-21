@@ -8,7 +8,7 @@
             <legend>PROFILE PICTURE</legend>
             <table>
                 <tr>
-                    <td><img src="pfp.png" alt="pfp" style="width: 80;"></td>
+                    <td><img src="img/pfp.png" alt="pfp" style="width: 80;"></td>
                 </tr>
                 <tr>
                     <td><input type="file" name="image" value=""></td>
@@ -30,5 +30,7 @@
  <!-- PHP Integration -->
 
 <?php
+
+
 
 ?>
