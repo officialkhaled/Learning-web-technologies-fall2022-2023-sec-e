@@ -10,7 +10,7 @@
       style="border-collapse: collapse; margin-top: 20px"
     >
       <tr>
-        <td><img src="img/logo.png" alt="Company Logo" style="width: 80px" /><a href="home.php" style="width: 100px" style="margin: 40px">Home</a> | <a href="login.php">Login</a> | <a href="register.php">Registration</a></td>
+        <td><img src="img/logo.png" alt="Company Logo" style="width: 80px" /><a href="publicHome.php" style="width: 100px" style="margin: 40px">Home</a> | <a href="login.php">Login</a> | <a href="register.php">Registration</a></td>
       </tr>
 
       <tr>

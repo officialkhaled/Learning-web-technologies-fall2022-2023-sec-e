@@ -58,7 +58,7 @@
                 <tr>
                     <fieldset>
                         <legend>Date of Birth</legend>
-                        <input type="date">
+                        <input type="date" name="dob">
                     </fieldset>
                 </tr>
             </table>

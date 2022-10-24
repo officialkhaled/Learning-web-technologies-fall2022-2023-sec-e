@@ -28,28 +28,35 @@
 
     <td style="padding-bottom: 100px">
     <fieldset>
-        <legend>PROFILE</legend>
+        <legend>EDIT PROFILE</legend>
         <form action="" method="post">
             <table align="center">
                 <tr>
-                    <td>Name </td>
-                    <td> : Bob</td>
-                    <td rowspan="5"><img src="img/pfp.png" alt="profile picture" width="80px"><a href="changepfp.php"><br>Change</a></td>
+                    <td>Name</td>
+                    <td>:</td>
+                    <td><input type="text" name="name"></td>
                 </tr>
                 <tr>
-                    <td>Email </td>
-                    <td> : bob@aiub.edu</td>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><input type="email" name="email"></td>
                 </tr>
                 <tr>
-                    <td>Gender </td>
-                    <td> : Male</td>
+                    <td>Gender</td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio">Male 
+                        <input type="radio">Female 
+                        <input type="radio">Other 
+                    </td>
                 </tr>
                 <tr>
-                    <td>Date of Birth </td>
-                    <td> : 19/09/1998</td>
+                    <td>Date of Birth</td>
+                    <td>:</td>
+                    <td><input type="date" name="date"></td>
                 </tr>
                 <tr>
-                    <td><a href="viewProfile.php">Edit Profile</a></td>
+                    <td><input type="submit" name="btn" value="Submit"></td>
                 </tr>
             </table>
         </form>
