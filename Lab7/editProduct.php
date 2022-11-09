@@ -1,21 +1,19 @@
 <html>
   <head>
-    <title>Products</title>
+    <title>Edit Product</title>
   </head>
   <body>
-    <form action="displayCheck.php" method="post" enctype="multipart/form-data" style="padding: 80px"> 
+    <form action="editProductDB.php" method="post" enctype="multipart/form-data" style="padding: 80px"> 
       <fieldset style="padding: 40px">
-        <legend>PRODUCTS</legend>
+        <legend>EDIT PRODUCT</legend>
         <table>
           <tr>
-            <td>NAME</td>
-            <td>PROFIT</td>
+            <label for="name">Name <br></label>
+            <input type="text" name="name" value=""> <br>
           </tr>
           <tr>
-            <td><?php echo ""; ?></td>
-            <td><?php echo ""; ?></td>
-            <td><a href="editProduct.php">Edit</a></td>
-            <td><a href="deleteProduct.php">Delete</a></td>
+            <label for="buyPrice">Buying Price <br></label>
+            <input type="number" name="buyPrice" value=""> <br>
           </tr>
           <tr>
             <label for="sellPrice">Selling Price <br></label>
@@ -23,7 +21,7 @@
           </tr>
           <tr>
             <hr>
-            <input type="checkbox" name="display"> Display <br>
+            <input type="checkbox" name="display" value=""> Display <br>
           </tr>
           <tr>
             <hr>
