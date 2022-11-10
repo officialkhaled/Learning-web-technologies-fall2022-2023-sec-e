@@ -1,3 +1,10 @@
+<?php
+
+  
+
+?>
+
+
 <html>
   <head>
     <title>Delete Product</title>
@@ -7,6 +14,7 @@
       <fieldset style="padding: 40px">
         <legend>DELETE PRODUCT</legend>
         <table>
+
           <tr>
             <label for="name">Name <br></label>
             <input type="text" name="name" value=""> <br>

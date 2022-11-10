@@ -7,11 +7,9 @@
   $profit = $_POST['sellPrice'] - $_POST['buyPrice'];
 
   if($name == "" || $buyPrice == "" || $sellPrice == ""){
-    header('location: editProduct.php?err=null');
+    header('location: deleteProduct.php?err=null');
   } else{
     $con = mysqli_connect('localhost', 'root', '', 'product_db');
-
-    //$sql = "update products set ('{$name}', '{$buyPrice}', '{$sellPrice}', '{$profit}')";
 
     $sql = "DELETE FROM `products` WHERE `Name`='{$name}'";
 
@@ -22,7 +20,6 @@
     } else {
       echo "Error";
     }
-    
     
   }
 
