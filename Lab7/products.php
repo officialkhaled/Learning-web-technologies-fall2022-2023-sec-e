@@ -1,34 +1,53 @@
 <html>
   <head>
     <title>Products</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <form action="displayCheck.php" method="post" enctype="multipart/form-data" style="padding: 80px"> 
+    <form action="displayCheck.php" method="post" enctype="multipart/form-data" style="padding: 80px; width: 400px"> 
       <fieldset style="padding: 40px">
         <legend>PRODUCTS</legend>
-        <table>
+        <table border="1" style="border-collapse: collapse; ">
           <tr>
-            <td>NAME</td>
-            <td>PROFIT</td>
+            <th style="padding: 15px">NAME</th>
+            <th style="padding: 15px">PROFIT</th>
+
           </tr>
+
+          <?php
+            
+            $conn = mysqli_connect('localhost', 'root', '', 'product_db');
+
+            $sql = "select * from products";
+            $result = mysqli_query($conn, $sql);
+
+            if($sql != null) {
+              while($data = mysqli_fetch_assoc($result)) {
+                //print_r($data);
+                echo"<tr>
+                      <th>{$data['Name']}</th>
+                      <td><center>{$data['Profit']}</center></td>
+                      <td><a href=\"editProduct.php\">Edit</a></td>
+                      <td><a href=\"deleteProduct.php\">Delete</a></td>
+                    </tr>";
+              }
+            } else {
+              echo "<h2>Empty Database!</h2>";
+            }
+            
+
+          ?>
+
+          <!--
+          <td><button onclick=\"location.href='editProduct.php'\">Edit</button></td>
+
           <tr>
-            <td><?php echo ""; ?></td>
-            <td><?php echo ""; ?></td>
-            <td><a href="editProduct.php">Edit</a></td>
-            <td><a href="deleteProduct.php">Delete</a></td>
+            <th style="padding: 20px">Samsung</th>
+            <td style="padding: 20px; text-align:center">9000</td>
+            <td style="padding: 20px"><a href="editProduct.php">Edit</a></td>
+            <td style="padding: 20px"><a href="deleteProduct.php">Delete</a></td>
           </tr>
-          <tr>
-            <label for="sellPrice">Selling Price <br></label>
-            <input type="number" name="sellPrice" value=""> <br>
-          </tr>
-          <tr>
-            <hr>
-            <input type="checkbox" name="display"> Display <br>
-          </tr>
-          <tr>
-            <hr>
-            <input type="submit" name="save" value="SAVE">
-          </tr>
+          -->
         </table>
       </fieldset>
 

@@ -12,13 +12,8 @@
     $con = mysqli_connect('localhost', 'root', '', 'product_db');
 
     //$sql = "update products set ('{$name}', '{$buyPrice}', '{$sellPrice}', '{$profit}')";
-    
-    // Check connection
-    if($con === false){
-      die("ERROR: Could not connect." . mysqli_connect_error());
-    }
 
-    $sql = "UPDATE `products` SET `Buying Price`='{$buyPrice}',`Selling Price`='{$sellPrice}',`Profit`='{$profit}' WHERE `Name`='{$name}'";
+    $sql = "DELETE FROM `products` WHERE `Name`='{$name}'";
 
     $status = mysqli_query($con, $sql);
 

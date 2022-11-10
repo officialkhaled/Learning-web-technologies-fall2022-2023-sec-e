@@ -3,7 +3,7 @@
     <title>Add Product</title>
   </head>
   <body>
-    <form action="addProductDB.php" method="post" enctype="multipart/form-data" style="padding: 80px"> 
+    <form action="addProductDB.php" method="post" enctype="multipart/form-data" style="padding: 80px; width: 400px"> 
       <fieldset style="padding: 40px">
         <legend>ADD PRODUCT</legend>
         <table>
@@ -21,7 +21,7 @@
           </tr>
           <tr>
             <hr>
-            <input type="checkbox" name="display"> Display <br>
+            <input type="checkbox" name="display" value="display" checked> Display <br>
           </tr>
           <tr>
             <hr>
