@@ -1,6 +1,7 @@
 <?php
 
   session_start();
+
   $name = $_POST['name'];
   $buyPrice = $_POST['buyPrice'];
   $sellPrice = $_POST['sellPrice'];
@@ -16,7 +17,7 @@
       die("ERROR: Could not connect." . mysqli_connect_error());
     }
 
-    $sql = "insert into products values ('{$name}', '{$buyPrice}', '{$sellPrice}', '{$profit}')";
+    $sql = "insert into products values ('', '{$name}', '{$buyPrice}', '{$sellPrice}', '{$profit}')";
 
     $status = mysqli_query($con, $sql);
 

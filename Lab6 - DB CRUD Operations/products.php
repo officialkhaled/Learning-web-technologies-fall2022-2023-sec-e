@@ -11,13 +11,12 @@
           <tr>
             <th style="padding: 15px">NAME</th>
             <th style="padding: 15px">PROFIT</th>
-
           </tr>
 
           <?php
-            
+            //Establish connection
             $conn = mysqli_connect('localhost', 'root', '', 'product_db');
-
+            //SQL Command
             $sql = "select * from products";
             $result = mysqli_query($conn, $sql);
 
@@ -35,7 +34,6 @@
               echo "<h2>Empty Database!</h2>";
             }
             
-
           ?>
 
           <!--
