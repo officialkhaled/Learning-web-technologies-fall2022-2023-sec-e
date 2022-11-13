@@ -1,6 +1,9 @@
 <?php
 
+  require_once('databaseModel.php');
+  require_once('crudOperations.php');
   session_start();
+
   $name = $_POST['name'];
   $buyPrice = $_POST['buyPrice'];
   $sellPrice = $_POST['sellPrice'];
@@ -9,9 +12,10 @@
   if($name == "" || $buyPrice == "" || $sellPrice == ""){
     header('location: deleteProduct.php?err=null');
   } else{
-    $con = mysqli_connect('localhost', 'root', '', 'product_db');
+    $con = getConnection();
 
-    $sql = "DELETE FROM `products` WHERE `Name`='{$name}'";
+    //$sql = "DELETE FROM `products` WHERE `Name`='{$name}'";
+    $sql = deleteProd();
 
     $status = mysqli_query($con, $sql);
 

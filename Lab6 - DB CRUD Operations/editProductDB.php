@@ -1,18 +1,21 @@
 <?php
 
+  require_once('databaseModel.php');
+  require_once('crudOperations.php');
   session_start();
+  
+  $id = $_POST['id'];
   $name = $_POST['name'];
   $buyPrice = $_POST['buyPrice'];
   $sellPrice = $_POST['sellPrice'];
   $profit = $_POST['sellPrice'] - $_POST['buyPrice'];
+  $product = ['id'=>$id, 'name'=>$name, 'buyPrice'=>$buyPrice, 'sellPrice'=> $sellPrice, 'profit'=>$profit];
 
   if($name == "" || $buyPrice == "" || $sellPrice == ""){
     header('location: editProduct.php?err=null');
   } else{
     //Establish connection
-    $con = mysqli_connect('localhost', 'root', '', 'product_db');
-    
-    //$sql = "update products set ('{$name}', '{$buyPrice}', '{$sellPrice}', '{$profit}')";
+    $con = getConnection();
     
     //Check connection
     if($con === false){
@@ -20,7 +23,9 @@
     }
     
     //SQL Command
-    $sql = "UPDATE `products` SET `Buying_Price`='{$buyPrice}',`Selling_Price`='{$sellPrice}',`Profit`='{$profit}' WHERE `Name`='{$name}'";
+    //$sql = "UPDATE `products` SET `Buying_Price`='{$buyPrice}',`Selling_Price`='{$sellPrice}',`Profit`='{$profit}' WHERE `Name`='{$name}'";
+
+    $sql = editProd();
 
     $status = mysqli_query($con, $sql);
 

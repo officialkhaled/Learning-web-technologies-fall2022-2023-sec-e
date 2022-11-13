@@ -1,6 +1,6 @@
 <?php
 
-  
+  require_once('databaseModel.php');
 
 ?>
 
@@ -17,7 +17,7 @@
           <tr>
             <?php
               //Establish connection
-              $conn = mysqli_connect('localhost', 'root', '', 'product_db');
+              $conn = getConnection();
               //SQL Command
               $sql = "select * from {$data['Name']}";
               $result = mysqli_query($conn, $sql);
