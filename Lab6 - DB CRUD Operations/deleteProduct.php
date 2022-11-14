@@ -1,6 +1,10 @@
 <?php
 
   require_once('databaseModel.php');
+  //require_once('deleteProductDB.php');
+  session_start();
+
+  $id = intval($_POST['ID']);
 
 ?>
 
@@ -17,10 +21,10 @@
           <tr>
             <?php
               //Establish connection
-              $conn = getConnection();
+              $con = getConnection();
               //SQL Command
-              $sql = "select * from {$data['Name']}";
-              $result = mysqli_query($conn, $sql);
+              $sql = "select * from {$data['id']}";
+              $result = mysqli_query($con, $sql);
 
               if($sql != null) {
                 while($data = mysqli_fetch_assoc($result)) {
@@ -37,6 +41,7 @@
 
             ?>
           </tr>
+          <a href="deleteProduct.php?id=<?php echo $result->id();?>"></a>
           <!--
           <tr>
             <label for="name">Name <br></label>

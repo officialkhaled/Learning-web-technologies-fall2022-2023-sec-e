@@ -33,6 +33,7 @@
                       <th>{$data['Name']}</th>
                       <td><center>{$data['Profit']}</center></td>
                       <td><a href=\"editProduct.php\">Edit</a></td>
+   
                       <td><a href=\"deleteProduct.php\">Delete</a></td>
                     </tr>";
               }
@@ -43,6 +44,9 @@
           ?>
 
           <!--
+
+           <td><a href=\"deleteProduct.php?id=<?php echo $result->ID();?>\"></a></td>
+
           <td><button onclick=\"location.href='editProduct.php'\">Edit</button></td>
 
           <tr>
