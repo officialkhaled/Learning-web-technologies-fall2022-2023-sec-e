@@ -1,7 +1,7 @@
 <?php
 
   require_once('databaseModel.php');
-  require_once('crudOperations.php');
+  //require_once('crudOperations.php');
   session_start();
 
   $name = $_POST['name'];
@@ -20,27 +20,27 @@
     if($con === false){
       die("ERROR: Could not connect." . mysqli_connect_error());
     }
-
+    /*
     $status = addProd($product);
     if($status) {
       echo "msg()";
-      header('location: addProduct.php');
+      header('location: products.php');
     } else {
       echo "<h2>Database error!</h2>";
     }
-    
-    /*
-    $sql = "insert into products values ('', '{$name}', '{$buyPrice}', '{$sellPrice}', '{$profit}')";
+    */
+
+    $sql = "INSERT into products VALUES ('', '{$name}', '{$buyPrice}', '{$sellPrice}', '{$profit}')";
 
     $status = mysqli_query($con, $sql);
 
     if($status) {
       echo "msg()";
-      header('location: addProduct.php');
+      header('location: products.php');
     } else {
       echo "<h2>Database error!</h2>";
     }
-    */
+    
   }
 
 ?>

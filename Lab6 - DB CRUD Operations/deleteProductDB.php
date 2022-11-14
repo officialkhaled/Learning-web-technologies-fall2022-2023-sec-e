@@ -1,7 +1,7 @@
 <?php
 
   require_once('databaseModel.php');
-  require_once('crudOperations.php');
+  //require_once('crudOperations.php');
   session_start();
 
   $name = $_POST['name'];
@@ -14,8 +14,8 @@
   } else{
     $con = getConnection();
 
-    //$sql = "DELETE FROM `products` WHERE `Name`='{$name}'";
-    $sql = deleteProd();
+    $sql = "DELETE FROM `products` WHERE `Name`='{$name}'";
+    //$sql = deleteProd();
 
     $status = mysqli_query($con, $sql);
 
