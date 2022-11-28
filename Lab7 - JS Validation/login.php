@@ -22,10 +22,7 @@
           <p class="msgPass">Please provide your password!</p>
 
           <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember" /> Remember
-            me
-          </label>
+          <label> <input type="checkbox" name="remember" /> Remember me </label>
         </div>
 
         <div class="container" style="background-color: #f1f1f1">
@@ -48,8 +45,17 @@
           //return false;
         }
 
+        if (document.myForm.password.value == "") {
+          //alert( "Please provide your password!" );
+          document.myForm.password.focus();
+          document.getElementsByClassName("msgPass")[0].innerHTML =
+            "Please provide your password!";
+          //return false;
+        }
+
         //return(true);
       }
     </script>
+    
   </body>
 </html>

@@ -10,6 +10,10 @@ body {
 
 .main-content {
   display: block;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Bordered form */
