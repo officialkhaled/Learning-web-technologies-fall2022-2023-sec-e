@@ -8,10 +8,11 @@
       <form
         id="login-form"
         name="myForm"
-        action=""
+        action="login.php"
         method="post"
         onsubmit="validate()"
       >
+
         <div class="container">
           <label for="username"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="username" />
@@ -33,29 +34,38 @@
     </div>
 
     <script>
-      //let msgUser = document.getElementsByClassName('msgUser')[0].innerHTML = "";
-      //let msgPass = document.getElementsByClassName('msgPass')[0].innerHTML = "";
+      let msgUser = document.getElementsByClassName('msgUser')[0].innerHTML = "";
+      let msgPass = document.getElementsByClassName('msgPass')[0].innerHTML = "";
 
       function validate() {
+        if (document.myForm.username.value == "" && document.myForm.password.value == "") {
+          //alert( "Please provide your password!" );
+          document.myForm.password.focus();
+          document.getElementsByClassName('msgPass')[0].innerHTML =
+            "Please provide your password!";
+          return false;
+        }
+
         if (document.myForm.username.value == "") {
           //alert( "Please provide your username!" );
           document.myForm.username.focus();
-          document.getElementsByClassName("msgUser")[0].innerHTML =
+          document.getElementsByClassName('msgUser')[0].innerHTML =
             "Please provide your username!";
-          //return false;
+          return false;
         }
 
         if (document.myForm.password.value == "") {
           //alert( "Please provide your password!" );
           document.myForm.password.focus();
-          document.getElementsByClassName("msgPass")[0].innerHTML =
+          document.getElementsByClassName('msgPass')[0].innerHTML =
             "Please provide your password!";
-          //return false;
+          return false;
         }
+
 
         //return(true);
       }
     </script>
-    
+
   </body>
 </html>
