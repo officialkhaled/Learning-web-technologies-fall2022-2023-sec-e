@@ -91,6 +91,17 @@ span.password {
   padding-top: 16px;
 }
 
+span a {
+  color: #04aa6d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+span a:hover {
+  color: #f44336;
+  text-decoration: underline;
+}
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.password {

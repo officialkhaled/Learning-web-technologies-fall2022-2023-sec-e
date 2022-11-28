@@ -24,11 +24,13 @@
 
           <button type="submit">Login</button>
           <label> <input type="checkbox" name="remember" /> Remember me </label>
+
+          
         </div>
 
         <div class="container" style="background-color: #f1f1f1">
-          <button type="button" class="cancelbtn">Cancel</button>
-          <span class="password">Forgot <a href="#">password?</a></span>
+          <button type="reset" class="cancelbtn">Cancel</button>
+          <span class="password"><a href="#">Forgot password?</a></span>
         </div>
       </form>
     </div>
@@ -38,7 +40,13 @@
         var x = document.forms["myForm"]["username"].value;
         var y = document.forms["myForm"]["password"].value;
 
-        if (x == "") {
+        if (x == "" && y == "") {
+          document.getElementsByClassName("msgUser")[0].innerHTML =
+            "Username is required";
+          document.getElementsByClassName("msgPass")[0].innerHTML =
+            "Password is required";
+          return false;
+        } else if (x == "") {
           document.getElementsByClassName("msgUser")[0].innerHTML =
             "Username is required";
           return false;
@@ -60,7 +68,7 @@
 
         return (alert("Successfully logged in!"));
 
-        
+
         /*
         if (x == "") {
           let msg = document.getElementsByClassName("msgUser")[0].innerHTML =
