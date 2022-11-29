@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <form action="displayCheck.php" method="post" enctype="multipart/form-data" style="padding: 80px; width: 400px"> 
+    <form action="products.php" method="get" enctype="multipart/form-data" style="padding: 80px; width: 400px"> 
+
       <fieldset style="padding: 40px">
         <legend>PRODUCTS</legend>
         <table border="1" style="border-collapse: collapse; ">
@@ -26,39 +27,44 @@
             $sql = "select * from products";
             $result = mysqli_query($con, $sql);
 
-            if($sql != null) {
-              while($data = mysqli_fetch_assoc($result)) {
-                //print_r($data);
-                echo"<tr>
-                      <th>{$data['Name']}</th>
-                      <td><center>{$data['Profit']}</center></td>
-                      <td><a href=\"editProduct.php\">Edit</a></td>
-   
-                      <td><a href=\"deleteProduct.php\">Delete</a></td>
-                    </tr>";
+            if(mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<th>{$row['Name']}</th>";
+                echo "<td><center>{$row['Profit']}</center></td>";
+                echo "<td><a href=\"editProduct.php\">Edit</a></td>";
+                      ?>
+                      <td><a href="products.php?delete=<?php echo $row['ID']; ?>">Delete</a></td>
+                      <?php
+                echo "</tr>";
               }
             } else {
               echo "<h2>Empty Database!</h2>";
             }
             
           ?>
-
-          <!--
-
-           <td><a href=\"deleteProduct.php?id=<?php echo $result->ID();?>\"></a></td>
-
-          <td><button onclick=\"location.href='editProduct.php'\">Edit</button></td>
-
-          <tr>
-            <th style="padding: 20px">Samsung</th>
-            <td style="padding: 20px; text-align:center">9000</td>
-            <td style="padding: 20px"><a href="editProduct.php">Edit</a></td>
-            <td style="padding: 20px"><a href="deleteProduct.php">Delete</a></td>
-          </tr>
-          -->
         </table>
       </fieldset>
 
     </form>
   </body>
 </html>
+
+<?php
+
+  if(isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    $sql = "DELETE FROM products WHERE ID = $id";
+    $result = mysqli_query($con, $sql);
+
+    if($result) {
+      echo "<h2>Record deleted successfully</h2>";
+      header('location: products.php');
+    } else {
+      echo "<h2>Error deleting record: </h2>" . mysqli_error($con);
+    }
+
+    mysqli_close($con);
+  }
+
+?>
