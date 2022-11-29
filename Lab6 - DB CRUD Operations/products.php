@@ -18,6 +18,7 @@
           <tr>
             <th style="padding: 15px">NAME</th>
             <th style="padding: 15px">PROFIT</th>
+            <th colspan="2" style="padding: 15px"><a href="addProduct.php">ADD PRODUCTS</a></th>
           </tr>
 
           <?php
@@ -40,6 +41,10 @@
               }
             } else {
               echo "<h2>Empty Database!</h2>";
+              echo "<h3>Insert some data first.</h3>";
+              
+              echo "<a href=\"addProduct.php\">Add Products</a>";
+
             }
             
           ?>
