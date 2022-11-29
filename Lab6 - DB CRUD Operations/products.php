@@ -18,7 +18,9 @@
           <tr>
             <th style="padding: 15px">NAME</th>
             <th style="padding: 15px">PROFIT</th>
-            <th colspan="2" style="padding: 15px"><a href="addProduct.php">ADD PRODUCTS</a></th>
+            <th colspan="2" style="padding: 15px">
+            <button><a href="addProduct.php">ADD PRODUCTS</a></button>
+          </th>
           </tr>
 
           <?php
@@ -33,9 +35,9 @@
                 echo "<tr>";
                 echo "<th>{$row['Name']}</th>";
                 echo "<td><center>{$row['Profit']}</center></td>";
-                echo "<td><a href=\"editProduct.php\">Edit</a></td>";
+                echo "<td><center><a href=\"editProduct.php\">Edit</a></center></td>";
                       ?>
-                      <td><a href="products.php?delete=<?php echo $row['ID']; ?>">Delete</a></td>
+                      <td><center><a href="products.php?delete=<?php echo $row['ID']; ?>">Delete</a></center></td>
                       <?php
                 echo "</tr>";
               }
