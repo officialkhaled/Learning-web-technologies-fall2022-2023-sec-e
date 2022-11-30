@@ -20,13 +20,14 @@ Auto Close Tag
 Auto Rename Tag
 Live Server
 Prettier
-XML Tools
+
 Rewrap
 
 Color Highlight
 Colorize
 Electron Color Theme
 One Monokai Theme
+XML Tools
 Guides
 
 CodeSnap
