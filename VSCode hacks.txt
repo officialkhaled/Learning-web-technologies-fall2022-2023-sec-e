@@ -12,35 +12,35 @@ Ctrl + B : To open/close the left menu tab
 Alt + Click : To create multiple cursors and select multiple lines and type in same code 
 Alt + Arrow(up/down) : To move a line up/down
 Ctrl + D : To select the same word from multiple lines and create multiple cursors (replace)
+Ctrl + I : HTML Tag Wrapper
+
 
 ----------------
--- EXTENSIONS --
+-- EXTENSIONS --  (* necessary and mandatory extensions)
 ----------------
-Auto Close Tag
-Auto Rename Tag
-Live Server
-Prettier
-Color Highlight
-Colorize
+Auto Close Tag*
+Auto Rename Tag*
+Live Server*
+Prettier*
+Color Highlight*
+Colorize*
 CodeSnap
-Better Comments
+Better Comments*
 Fluent Icons
 Vscode-icons
-GitHub Copilot
+GitHub Copilot*
 CSS Snippets
-Image preview
+Image preview*
 Tailwind CSS IntelliSense
 TODO Highlight
 CSS Flexbox Cheatsheet
-
+HTML Tag Wrapper
+Guides*
 
 Rewrap
-Code Spell Checker
 Electron Color Theme
 One Monokai Theme
 XML Tools
-Guides
-Tabnine AI
 
 --------------
 -- SETTINGS --
