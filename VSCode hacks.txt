@@ -20,20 +20,26 @@ Auto Close Tag
 Auto Rename Tag
 Live Server
 Prettier
-
-Rewrap
-
 Color Highlight
 Colorize
-Electron Color Theme
-One Monokai Theme
-XML Tools
-Guides
-
 CodeSnap
 Better Comments
 Fluent Icons
 Vscode-icons
+GitHub Copilot
+CSS Snippets
+Image preview
+Tailwind CSS IntelliSense
+TODO Highlight
+CSS Flexbox Cheatsheet
+
+
+Rewrap
+Code Spell Checker
+Electron Color Theme
+One Monokai Theme
+XML Tools
+Guides
 Tabnine AI
 
 --------------
