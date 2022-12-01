@@ -9,7 +9,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Search bar style */
 #search {
   display: flex;
   flex-direction: row;
@@ -29,7 +28,10 @@
   background-size: 20px 20px;
 }
 
-/* Search button style */
+#search:focus {
+  outline: none;
+}
+
 #searchBtn {
   display: flex;
   flex-direction: row;
