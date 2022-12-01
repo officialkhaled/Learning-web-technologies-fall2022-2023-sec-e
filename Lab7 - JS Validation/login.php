@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
   <head>
     <title>Login</title>
     <link rel="stylesheet" href="styles.css" />
@@ -25,7 +25,6 @@
           <button type="submit">Login</button>
           <label> <input type="checkbox" name="remember" /> Remember me </label>
 
-          
         </div>
 
         <div class="container" style="background-color: #f1f1f1">
@@ -37,20 +36,20 @@
 
     <script>
       function validateForm() {
-        var x = document.forms["myForm"]["username"].value;
-        var y = document.forms["myForm"]["password"].value;
+        let x = document.forms["myForm"]["username"].value;
+        let y = document.forms["myForm"]["password"].value;
 
-        if (x == "" && y == "") {
+        if (x === "" && y === "") {
           document.getElementsByClassName("msgUser")[0].innerHTML =
             "Username is required";
           document.getElementsByClassName("msgPass")[0].innerHTML =
             "Password is required";
           return false;
-        } else if (x == "") {
+        } else if (x === "") {
           document.getElementsByClassName("msgUser")[0].innerHTML =
             "Username is required";
           return false;
-        } else if (y == "") {
+        } else if (y === "") {
           document.getElementsByClassName("msgPass")[0].innerHTML =
             "Password is required";
           return false;
