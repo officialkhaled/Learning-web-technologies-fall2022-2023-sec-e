@@ -5,8 +5,7 @@ Emmet = Faster Coding: https://www.youtube.com/watch?v=EzGWXTASWWo
 ------------------------
 -- Keyboard Shortcuts --
 ------------------------
-Ctrl + K + C : Comment out selected section/part of code
-Ctrl + K + U : Undo Comment out selected section/part of code
+Shift + Alt + A : Comment out selected section/part of code (Same for Undo)
 Alt + Shift + Down Arrow : To duplicate the current line
 Ctrl + B : To open/close the left menu tab
 Alt + Click : To create multiple cursors and select multiple lines and type in same code 
