@@ -35,6 +35,7 @@
     </div>
 
     <script>
+
       function validateForm() {
         let x = document.forms["myForm"]["username"].value;
         let y = document.forms["myForm"]["password"].value;
@@ -55,49 +56,14 @@
           return false;
         }
 
-        else if (x.length < 2) {
-          document.getElementsByClassName("msgUser")[0].innerHTML =
-            "Username must be at least 2 characters";
-          return false;
-        } else if (y.length < 8) {
-          document.getElementsByClassName("msgPass")[0].innerHTML =
-            "Password must be at least 8 characters";
-          return false;
-        }
+        /* PHP validation from external php file */
+        
 
         return (alert("Successfully logged in!"));
 
-
-        /*
-        if (x == "") {
-          let msg = document.getElementsByClassName("msgUser")[0].innerHTML =
-            "Please provide your username!";
-          return false;
-        }
-        else if (y == "") {
-          let msg = document.getElementsByClassName("msgPass")[0].innerHTML =
-            "Please provide your password!";
-          return false;
-        }
-        else if (x == "" && y == "") {
-          let alertUser = document.getElementsByClassName("msgUser")[0].innerHTML =
-            "Please provide your username!";
-          let alertPass = document.getElementsByClassName("msgPass")[0].innerHTML =
-            "Please provide your password!";
-          return false;
-        }
-        
-        else if (x == "admin" && y == "admin") {
-          alert("Login successful!");
-          return true;
-        } else {
-          alert("Login failed!");
-          return false;
-        }
-        */
-
       }
-    </script>
 
+    </script>
+    
   </body>
 </html>
