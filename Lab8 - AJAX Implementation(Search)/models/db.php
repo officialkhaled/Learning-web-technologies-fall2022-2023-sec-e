@@ -2,7 +2,7 @@
 
       //Establish connection
       function getConnection() {
-        $con = mysqli_connect('localhost', 'root', '', 'registration');
+        $con = mysqli_connect('localhost', 'root', '', 'system_db');
       }
       
 
