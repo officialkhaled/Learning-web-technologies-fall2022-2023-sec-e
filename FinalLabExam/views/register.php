@@ -61,22 +61,3 @@
     </body>
 </html>
 
- <!-- PHP Integration -->
-
-<?php 
-
-/*   echo "PHP VALIDATION: "; 
-  echo '<br><br>';
-
-  if(isset($_GET['err'])){
-    if($_GET['err'] == 'invalid_request'){
-        echo "<h2> invalid request error. </h2>";
-    }
-
-    if($_GET['err'] == 'null'){
-        echo "<h2> One or more field is missing! </h2>";
-    }
-  } */
-
-
-?>

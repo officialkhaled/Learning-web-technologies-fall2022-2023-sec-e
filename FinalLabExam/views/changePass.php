@@ -2,11 +2,25 @@
 
 <head>
   <title>Change Password Form</title>
+  <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-content: center:
+      }
+      table {
+        width: 400px;
+      }
+      fieldset {
+        margin-top: 200px;
+        width: 400px;
+      }
+    </style>
 </head>
 
 <body>
-  <form method="post" action="" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
-    <!-- php integration for security -->
+  <form method="post" action="changePassCheck.php" >
+
     <fieldset>
       <legend>CHANGE PASSWORD</legend>
       <table>
@@ -39,6 +53,4 @@
 </body>
 
 </html>
-
-<!-- PHP Integration -->
 

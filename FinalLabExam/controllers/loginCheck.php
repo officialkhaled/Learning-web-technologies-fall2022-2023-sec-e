@@ -4,7 +4,7 @@
   $userid = $_POST['userid'];
   $password = $_POST['password'];
 
-  $pattern = "\b([1-9]|[1-9][0-9]|100)\d";
+  //$pattern = "\b([1-9]|[1-9][0-9]|100)\d";
 
   if($userid == "") {
     echo "<h2> Validation failed: User ID missing! </h2>";
@@ -22,9 +22,11 @@
       echo "<h2> Validation failed: Password must contain at least one special character (@, #, $, %) </h2>";
   } else {
       //echo "<h1> Validation Successful!  </h1>";
-      if(['user']['usertype']) {
+      if(['usertype'] == 'admin') {
         header('location: ../views/adminHome.php');
       } else {
+        $_SESSION['user'];
+        //setcookie('user', , time()+3600 , '/')
         header('location: ../views/userHome.php');
       }
   }
