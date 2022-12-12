@@ -16,13 +16,10 @@
   function validateRegister($userid, $password, $cPassword, $name, $email, $usertype) {
     $con = getConnection();
 
-    $sql = "SELECT * FROM user WHERE userid='$userid' AND password='$password'";
+    $sql = "INSERT INTO user VALUES('{$user['userid']}', '{$user['password']}', '{$user['name']}', '{$user['email']}'), '{$user['usertype']}')";
 
-   
-    $result = mysqli_query($con, $sql);
-   
-    $count = mysqli_num_rows($result);
-
+    $status = mysqli_query($con, $sql);
+    return $status;
   
   }
 ?>

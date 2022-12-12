@@ -23,7 +23,7 @@
             <table>
                 <tr>
                     <td>ID </td>
-                    <td><input type="number" name="id" value=""></td>
+                    <td><input type="text" name="userid" value=""></td>
                 </tr>
 
                 <tr>
@@ -31,7 +31,8 @@
                     <td><input type="password" name="password" value=""></td>
                 </tr>
                 <tr>
-                    <td>Confirm Password</td>                 <td><input type="password" name="cPassword" value=""></td>
+                    <td>Confirm Password</td>
+                    <td><input type="password" name="cPassword" value=""></td>
                 </tr>
                 <tr>
                     <td>Name </td>

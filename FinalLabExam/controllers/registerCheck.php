@@ -1,32 +1,41 @@
 <?php
 
     session_start();
+    //require_once '../models/userModel.php';
+    require_once '../models/db.php';
 
     $userid = $_POST['userid'];
     $password = $_POST['password'];
     $cPassword = $_POST['cPassword'];
     $name = $_POST['name'];
-    $type = $_POST['type'];
+    $email = $_POST['email'];
+    $usertype = $_POST['usertype'];
+
+    $user = ['name' => $name, 'email' => $email, 'userid' => $userid, 'password' => $password, 'usertype' => $usertype];
 
 
-    if ($userid == "" || $password == "" || $cPassword == "" || $name = "" || $type == "") {
-        header('location: register.php?err=null');
+    if ($userid == "" || $password == "" || $cPassword == "" || $name == "" || $email == "" || $usertype == "") {
+        header('location: ../views/register.php?err=null');
 
     } else {
-        $user = ['name' => $name, 'email' => $email, 'username' => $username, 'password' => $password, 'gender' => $gender, 'date' => $date];
-        $_SESSION['user'] = $user;
-        if (strlen($username < 2)) {
-            echo "<h2> Username must be at least 2 characters long! </h2>";
-        } else if (strlen($username >= 2)) {
-            if ((substr_count($username, '@') > 0) || (substr_count($username, '#') > 0) || (substr_count($username, '$') > 0) || (substr_count($username, '%') > 0) || (substr_count($username, '/') > 0) || (substr_count($username, '*') > 0) || (substr_count($username, '+') > 0) || (substr_count($username, '(') > 0) || (substr_count($username, ')') > 0) || (substr_count($username, '!') > 0) || (substr_count($username, '^') > 0)) {
-                echo "<h2>Validation failed: Username can contain alpha numeric characters, period, dash or underscore only! </h2>";
-            }
-            //Incomplete
-            else {
+        //function validateRegister($userid, $password, $cPassword, $name, $email, $usertype);
 
-            }
+        $con = getConnection();
+        if($con === false){
+            die("ERROR: Could not connect." . mysqli_connect_error());
+          }
+
+        $sql = "INSERT INTO user VALUES('{$user['userid']}', '{$user['password']}', '{$user['name']}', '{$user['email']}'), '{$user['usertype']}')";
+
+        $status = mysqli_query($con, $sql);
+
+        if($status) {
+            $_SESSION['user'] = $user;
+            header('location: login.php');
+        } else {
+            echo "<h2> Database Error! </h2>";
         }
-        header('location: login.php');
+        
     }
 
 ?>

@@ -22,7 +22,7 @@
       echo "<h2> Validation failed: Password must contain at least one special character (@, #, $, %) </h2>";
   } else {
       //echo "<h1> Validation Successful!  </h1>";
-      if() {
+      if(['user']['usertype']) {
         header('location: ../views/adminHome.php');
       } else {
         header('location: ../views/userHome.php');
